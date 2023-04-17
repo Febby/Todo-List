@@ -5,12 +5,16 @@ export function NewTodoForm(props){
     const [newItem, setNewItem] = useState("")
 
     function handleSubmit(e) {
-        e.preventDefault();
-        if(newItem === "") return
-    
-        props.onSubmit(newItem)
+      e.preventDefault();
+     // Check for empty input
+      if (!newItem.trim()) {
+        alert("Please enter a valid input.");
+        return;
+      }
+  
+      props.onSubmit(newItem)
 
-        setNewItem("")
+      setNewItem("")
       }
    
 
