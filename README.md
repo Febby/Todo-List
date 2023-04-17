@@ -1,5 +1,10 @@
 # Todo-List
 My React To-do List
 
-## Install dependencies
+## How to run project
+
+- Install Dependencies
 ```npm i```
+
+- Run Dev server
+```npm run dev```
