@@ -12,10 +12,14 @@ export default function App() {
     return JSON.parse(localValue)
   })
 
+  
+
   //Save item to localstorage
-  useEffect(() =>{
-    localStorage.setItem("ITEMS", JSON.stringify(todos))
-  }, [todos])
+  useEffect(() => {
+    if (todos.length) {
+      localStorage.setItem("ITEMS", JSON.stringify(todos));
+    }
+  }, [todos]);
 
   function addTodo(title) {
     setTodos(currentTodos =>{

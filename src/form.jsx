@@ -3,7 +3,7 @@ import { useState } from 'react';
 export function NewTodoForm(props){
     
     const [newItem, setNewItem] = useState("")
-
+    
     function handleSubmit(e) {
       e.preventDefault();
      // Check for empty input
